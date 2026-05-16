@@ -1,0 +1,57 @@
+{
+  "name": "@mukundakatta/wrap-mcp",
+  "version": "0.1.0",
+  "mcpName": "io.github.MukundaKatta/wrap",
+  "description": "MCP server: word-wrap text at a configurable column width.",
+  "type": "module",
+  "bin": {
+    "mcp-wrap": "dist/server.js"
+  },
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "tsx src/server.ts",
+    "test": "node --test --import tsx test/*.test.ts",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "cursor",
+    "cline",
+    "windsurf",
+    "zed",
+    "word-wrap",
+    "format",
+    "text"
+  ],
+  "author": "Mukunda Katta <mukunda.vjcs6@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/MukundaKatta/wrap-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/MukundaKatta/wrap-mcp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MukundaKatta/wrap-mcp.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
+}
