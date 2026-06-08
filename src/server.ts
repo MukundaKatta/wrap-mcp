@@ -21,8 +21,11 @@ export interface WrapOpts {
 }
 
 export function wrap(text: string, opts: WrapOpts = {}): string {
+  if (typeof text !== 'string') throw new Error('text must be a string');
   const width = opts.width ?? 80;
-  if (width < 1) throw new Error('width must be >= 1');
+  if (!Number.isInteger(width) || width < 1) {
+    throw new Error('width must be an integer >= 1');
+  }
   const breakLong = opts.break_long_words ?? true;
 
   return text
